@@ -2,6 +2,11 @@
 
 {% block content %}
 <h1> {{destinations.name}} </h1>
+<p>{{ destination.region }}</p>
+    <p><a href="/destination/{{ destination.id }}/edit">Edit</a></p>
+    <form action="/destinations/{{ destination.id }}/delete" method="POST">
+        <button type="submit">Delete {{ destination.name }}</button>
+    </form>
 
 
 {% endblock %}

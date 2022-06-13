@@ -5,4 +5,4 @@ import repositories.attractions_repository as attractions_repository
 import repositories.countries_repository as countries_repository
 import repositories.destinations_repository as destination_repository
 
-attractions_blueprint = Blueprint("name", __name__)
+attractions_blueprint = Blueprint("attractions", __name__)

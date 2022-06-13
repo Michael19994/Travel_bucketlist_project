@@ -2,8 +2,15 @@
 
 {% block content %}
 <h1>Destinations</h1>
+{% for destination in all_destinations %}
+<p>
+    <a href="/destinations/{{ destination.id }}">{{ destination.name }}</a> - {{ destination.country.name }}
+</p>
+{% endfor %}
 
-
+<p>
+    <img src="{{ url_for('static', filename='imgs/Ecotourism_img3.jpeg') }}" alt="mount kilimanjoro">
+</p>
 
 
 {% endblock %}
