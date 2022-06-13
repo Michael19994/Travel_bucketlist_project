@@ -7,5 +7,23 @@
 
     <form action="/countries" method="POST">
 
+        <div>
+            <label for="regions">Region</label>
+                <input type="text" id="region" name="region">
+    
+        </div>
+
+        <div>
+            <label for="country">Country</label>
+            <input type="text" name="country" id="country">
+
+        </div>
+        <input type="submit" value="Add">
+        </form>   
+
+        
+    
+        <img src="{{ url_for('static', filename='imgs/Ecotourism_img5.jpeg') }}" height="300" width="800" alt="flags of the world">
+
 {% endblock content %}
         

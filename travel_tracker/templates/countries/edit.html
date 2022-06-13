@@ -2,25 +2,20 @@
 
 
 {% block content %}
-    <h2>Editing {{ current_country.name }}</h2>
+    <h2>Editing {{ country.name }}</h2>
 
-    <form action="/countries/{{ current_country.id }}" method="POST">
+    <form action="/countries/{{ country.id }}" method="POST">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value="{{ country.name }}">
+        </div>
         <div>
             <label for="region">Region</label>
-            <input type="text" id="region" name="region" value="{{ current_country.region }}">
+            <input type="text" id="region" name="region" value="{{ country.region }}">
         </div>
+
+
         <div>
-            <label for="country">Country</label>
-                <select id="country" name="country" class="form-control">
-                    {% for country in countries %}
-                    <option value="{{ country.name }}" {% if country.id == current_country.id %} selected {% endif %}>
-                        {{ country.name }}
-                    </option>
-                {% endfor %}     
-                </select>
-        </div>
-        <div>
-            <label for=""></label>
             <input type="submit" value="Update Country">
         </div>
     </form>

@@ -2,7 +2,7 @@
 
 {% block content %}
 <h1>Destinations</h1>
-{% for destination in all_destinations %}
+{% for destination in destinations %}
 <p>
     <a href="/destinations/{{ destination.id }}">{{ destination.name }}</a> - {{ destination.country.name }}
 </p>

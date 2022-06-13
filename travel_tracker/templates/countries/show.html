@@ -1,13 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1> {{ Country.name }}</h1>
+<h1> {{ country.name }}</h1>
 <p>{{ country.region }}</p>
 <p><a href="/countries/{{ country.id }}/edit">Edit</a></p>
     <form action="/countries/{{ country.id }}/delete" method="POST">
         <button type="submit">Delete {{ country.name }}</button>
     </form>
 {% endblock content %}
-
-
-{% endblock %}

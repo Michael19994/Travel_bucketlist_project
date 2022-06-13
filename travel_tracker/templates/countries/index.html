@@ -3,15 +3,19 @@
 {% block content %}
 <h1>Countries</h1>
 
+<p>
+    <img src="{{ url_for('static', filename='imgs/Ecotourism_img2.jpeg') }}" height="400" width="850" alt="map of the world">
 
-    <h2>Countries to pick from</h2>
-    <nav class="">
+</p>
+
+    <h2>Countries added</h2>
+    <nav class="secondary">
         <ul>
             <li><a href="/countries/new">Add a New Country</a></li>
         </ul>
     </nav>
 
-    {% for country in all_countries %}
+    {% for country in countries %}
     
         <p>
             <a href="/countries/{{ country.id }}">{{ country.name }}</a> - {{ country.region }}
@@ -19,10 +23,7 @@
         
     {% endfor %}
 
-    <p>
-        <img src="{{ url_for('static', filename='imgs/Ecotourism_img2.jpeg') }}" height="400" width="850" alt="map of the world">
-
-    </p>
+    
 
 {% endblock content %}
 
