@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h2>Editing {{ destination.name }}</h2>
+    <form action="/destinations/{{ destination.id }}" method="POST">
+    
+        <div>
+            <label for="name">Destination</label>
+            <input type="text" id="name" name="name" value="{{ destination.name }}">
+        </div>
+        <div>
+            <label for="country">Country</label>
+            <select name="country" id="country"> 
+             {% for country in countries %} 
+            <option value="{{ country.id }}">{{country.name}} </option>
+             {% endfor %}
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Update Destination">
+        </div>
+    </form>
+    
+{% endblock content %}  

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h2>Add Attraction</h2>
+
+    <form action="/attractions" method="POST">
+
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <input type="text" id="description" name="description">
+        </div>
+
+        <div>
+            <label for="destinations">Destination</label>
+            <input type="text" id="destination" name="destination">
+        </div>
+        
+        <div>
+            <label for="date">Date</label>
+            <input type="text" name="date" id="date">
+        </div>
+        
+        <div>
+            <label for="visited">Visited</label>
+            <select name="visited" id="visited">
+            <option value="true">True</option>
+            <option value="false">False</option>
+            </select>
+        </div>
+
+
+        <input type="submit" value="Add">
+        </form>   
+
+        
+    
+        <img src="{{ url_for('static', filename='imgs/Ecotourism_img4.jpeg') }}" height="400" width="700" alt="whale watching">
+
+{% endblock content %}

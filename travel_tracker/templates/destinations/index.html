@@ -2,15 +2,25 @@
 
 {% block content %}
 <h1>Destinations</h1>
-{% for destination in destinations %}
-<p>
-    <a href="/destinations/{{ destination.id }}">{{ destination.name }}</a> - {{ destination.country.name }}
-</p>
-{% endfor %}
 
 <p>
-    <img src="{{ url_for('static', filename='imgs/Ecotourism_img3.jpeg') }}" alt="mount kilimanjoro">
+    <img src="{{ url_for('static', filename='imgs/Ecotourism_img3.jpeg') }}" height="400" width="600" alt="mount kilimanjoro">
 </p>
+
+    <h2>Destinations Added</h2>
+    <nav class="secondary">
+        <ul>
+            <li><a href="/destinations/new">Add a New Destination</a></li>
+        </ul>
+    </nav>
+        
+    {% for destination in destinations %}
+    <p>
+        <a href="/destinations/{{ destination.id }}">{{ destination.name }}</a>
+    </p>
+    {% endfor %}
+
+
 
 
 {% endblock %}

@@ -2,18 +2,25 @@
 
 {% block content %}
     <h2>Add Destination</h2>
-    <form action="/destinations" methos="POST">
-        <div>
-            <label for="Destination">Destination Name</label>
-            <input type="text" name="destination">
-        </div>
+
+        <form action="/destinations" method="POST">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name">
+            </div>
 
         <div>
             <label for="country">Country</label>
-                <select id="country" name="country" class="form-control">
-                
-        <div>
-            <input type="submit" value="Add Destination">
+            <select name="country" id="country"> 
+             {% for country in countries %} 
+            <option value="{{ country.id }}">{{country.name}} </option>
+             {% endfor %}
+    
+
+            </select>
+
         </div>
+        <input type="submit" value="Add">
     </form>
+
 {% endblock content %}
