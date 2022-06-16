@@ -1,5 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,600;1,200;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100&display=swap');
+
 body {
     background-color: grey;
-    color: white
+    color: grey;
+    min-height: 100vh;
 }
+
+main {
+    min-height: 100vh;
+}
+
     
+nav > ul {
+    list-style: none;
+    display: flex;
+}
+
+nav > ul > li {
+    margin-right: 1rem;
+}
+
+nav > ul > li > a {
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    transition: color 0.4s ease;
+}
+
+nav > ul > li > a:hover {
+    margin-right: 1rem;
+    color: darkorange;
+    text-decoration: underline;
+}
+
+#index-homepage {
+    background-image: url("/static/imgs/Ecotourism_img1.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.grid {
+    width: 100%;
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+    margin: auto 0;
+    background-color: rgba(0, 0, 0, 0.328);
+}
+
+
+section  h1 {
+    text-align: center;
+    color: white;
+    font-family: Raleway, sans-serif;
+    font-weight: 200;
+    font-size: 4rem;
+    text-shadow: 2px 3px 7px rgba(0,0,0,0.68);
+}
+
+section  p {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+}
+
+#index-countries {
+    background-image: url("/static/imgs/Ecotourism_img2.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    }
+
+body {
+    background-color: white;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+h2 {
+    color: darkblue;
+    text-align: center;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 2rem;
+    margin: auto;
+    max-width: 60vw;
+}
+
+.image-grid > * {
+    box-shadow: 2px 4px 6px 2px rgba(0, 0, 0, 0.7);
+}
+
+#index-attractions {
+    background-image: url("/static/imgs/Ecotourism_img5.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}

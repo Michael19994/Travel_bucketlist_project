@@ -23,15 +23,15 @@ def add_attraction():
     every_destination = destinations_repository.select_all()
     return render_template("/attractions/new.html", destinations=every_destination)
 
-@attractions_blueprint.route("/attractions/new", methods=["POST"])
+@attractions_blueprint.route("/attractions", methods=["POST"])
 def create_attraction():
     name = request.form['name']
     description = request.form['description']
-    destination = request.form['destination']
+    destination_id = request.form['destination_id']
+    destination = destinations_repository.select(destination_id)
     date = request.form['date']
     visited = request.form['visited']
-    new_destination = Destination.select(destination)
-    new_attraction = Attraction(name, description, new_destination, date, visited)
+    new_attraction = Attraction(name, description, destination, date, visited)
     attractions_repository.save(new_attraction)
     return redirect("/attractions")
 
@@ -41,7 +41,7 @@ def edit_attraction(id):
     every_destination = destinations_repository.select_all()
     return render_template("/attractions/edit.html", attraction=attraction, destination=every_destination)
 
-@attractions_blueprint.route("/attractions", methods=["POST"])
+@attractions_blueprint.route("/attractions/<id>", methods=["POST"])
 def update_attraction():
     name = request.form['name']
     description = request.form['description']

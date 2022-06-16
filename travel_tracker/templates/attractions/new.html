@@ -18,7 +18,12 @@
 
         <div>
             <label for="destinations">Destination</label>
-            <input type="text" id="destination" name="destination">
+            <select name="destination_id" id="destinations">
+                {% for destination in destinations %}
+                   <option value="{{ destination.id }}">{{destination.name}}</option>
+                {% endfor %}
+
+            </select>
         </div>
         
         <div>
@@ -29,8 +34,8 @@
         <div>
             <label for="visited">Visited</label>
             <select name="visited" id="visited">
-            <option value="true">True</option>
-            <option value="false">False</option>
+            <option value="true">Visited</option>
+            <option value="false">Not Visited</option>
             </select>
         </div>
 

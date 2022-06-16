@@ -3,9 +3,17 @@
 {% block content %}
 <h1>Destinations</h1>
 
-<p>
-    <img src="{{ url_for('static', filename='imgs/Ecotourism_img3.jpeg') }}" height="400" width="600" alt="mount kilimanjoro">
-</p>
+<section class="index-destinations">
+
+
+    <div class="image-grid">
+        <img src="{{ url_for('static', filename='imgs/Ecotourism_img7.jpeg') }}" height="200" width="300" alt="rainforest">
+        <img src="{{ url_for('static', filename='imgs/Ecotourism_img8.jpeg') }}" height="200" width="300" alt="temple">
+        <img src="{{ url_for('static', filename='imgs/Ecotourism_img9.jpeg') }}" height="200" width="300" alt="castle on cliffside">
+        <img src="{{ url_for('static', filename='imgs/Ecotourism_img11.jpeg') }}" height="200" width="300" alt="machupichu">
+    </div>
+
+
 
     <h2>Destinations Added</h2>
     <nav class="secondary">
@@ -21,6 +29,6 @@
     {% endfor %}
 
 
-
+</section>
 
 {% endblock %}
